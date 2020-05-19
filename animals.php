@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>DOGGY'S LAYOUT</title>
+        <title>CATTY'S LAYOUT</title>.
+        <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <style type="text/css">
 
@@ -47,10 +48,12 @@
         $result = file_get_contents('https://api.thecatapi.com/v1/images/search');
         $res    = json_decode($result, true);
         $url    = $res[0]['url'];
+        $id     = $res[0]['id'];
         $width  = $res[0]['width'];
         $height = $res[0]['height'];
 
         $urls[$i]['url']    = $url;
+        $urls[$i]['id']     = $id;
         $urls[$i]['width']  = $width;
         $urls[$i]['height'] = $height;
     }
@@ -60,14 +63,15 @@
         <header>
             <div class="main">
                 <ul>
-                    <li><b><a href="http://localhost/MY_AWS_WEBSITE/animals.php">Home</a></b></li>
-                    <li><b><a href="#">List</a></b></li>
+                    <li><b><a href="index.php">Home</a></b></li>
+                    <li><b><a href="animals.php">List</a></b></li>
                 </ul>
             </div>
             <div class="container">
                 <table  id="table1"  cellspacing="3" cellpadding="3">
                     <tr>
                         <th>SNO</th>
+                        <th>NAME</th>
                         <th>WIDTH(PX)</th>
                         <th>HEIGHT(PX)</th>
                         <th>IMAGE</th>
@@ -78,6 +82,7 @@
                         ?>
                         <tr>
                             <td><?php echo $key + 1; ?></td>
+                            <td><?php echo $value['id']; ?></td>
                             <td><?php echo $value['width']; ?></td>
                             <td><?php echo $value['height']; ?> </td>
                             <td><a target="_blank" href="<?php echo $value['url']; ?>"><?php echo "Click Here"; ?></a></td>

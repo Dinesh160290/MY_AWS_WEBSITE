@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>CATTY'S LAYOUT</title>
+        <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
         <style>
             
@@ -36,15 +37,15 @@
     <header>
     	<div class="main">
     		<ul>
-    			<li><a>Home</a></li>
-    			<li><a href="/animals.php">List</a></li>
+    			<li><a href='index.php'>Home</a></li>
+    			<li><a href="animals.php">List</a></li>
     		</ul>
     	</div>
     	<div class="container">
     		
                 <table  id="table1"  cellspacing="3" cellpadding="3">
                     <tr><td><h1>CATTY'S LAYOUT</h1></td></tr>
-                    <tr><td><h3><a href='/animals.php'>View Cat's List</a></h3></td></tr>
+                    <tr><td><h3><a href='animals.php'>View Cat's List</a></h3></td></tr>
                 </table>
     	</div>
     </header>
