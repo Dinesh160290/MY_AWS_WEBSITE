@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOGGY'S LAYOUT</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
 <?php
         ini_set('max_execution_time',0);
         $urls = array();
@@ -15,11 +22,18 @@
         }   
 ?>
 
-<html>
-    <head></head>
-<body style="background:skyblue;">
-	<h1>Image</h1>
-        <table border="1px solid grey">
+<body>
+    <header>
+    	<div class="main">
+    		<ul>
+    			<li><a href="http://localhost/MY_AWS_WEBSITE/animals.php">Home</a></li>
+    			<li><a href="#">Services</a></li>
+    			<li><a href="#">Gallery</a></li>
+    			<li><a href="#">About us</a></li>
+    		</ul>
+    	</div>
+    	<div>
+    		<table border="1px solid grey">
 
              <tr>
                    <th>SNO</th>
@@ -38,6 +52,7 @@
             </tr>
              <?php  }  ?>
         </table>
+    	</div>
+    </header>
 </body>
-	<!-- <img src="<?php echo $url; ?>" width="<?php echo $width; ?>" height="<?php echo $height;  ?>"/> -->
 </html>
